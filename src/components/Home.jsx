@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import MateusPic from "./img/mateus-palace.jpg";
+
 
 function Home() {
   return (
@@ -31,17 +33,7 @@ function Home() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <svg
-              className="bd-placeholder-img"
-              width="100%"
-              height="100%"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <rect width="100%" height="100%" fill="#777" />
-            </svg>
+          <img className="img-fluid" src={MateusPic} alt="error" />
 
             <div className="container">
               <div className="carousel-caption text-start">
@@ -59,6 +51,7 @@ function Home() {
             </div>
           </div>
           <div className="carousel-item">
+          
             <svg
               className="bd-placeholder-img"
               width="100%"
@@ -270,7 +263,7 @@ function Home() {
           </div>
         </div>
 
-        {/* <hr className="featurette-divider"> */}
+        <hr className="featurette-divider" />
 
         <div className="row featurette">
           <div className="col-md-7 order-md-2">
