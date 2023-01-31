@@ -11,7 +11,7 @@ function NavBar() {
       <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="#">
-            Carousel
+            NavBAR
           </Link>
           <button
             className="navbar-toggler"
