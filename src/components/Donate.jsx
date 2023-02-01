@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MateusLogo from "./img/fcm-logotipo.svg";
+// import axios from axios;
 
 import { useState } from "react";
 
@@ -14,12 +15,27 @@ const Donate = () => {
   // const [zip, setZip] = useState("");
 
   // const [forms, setForms] = useState([]);
-  const [hasBeenSubmitted, setHasBeenSubmitted] = useState("false");
+  // const [hasBeenSubmitted, setHasBeenSubmitted] = useState("false");
   const [FirstNameErrors, setFirstNameErrors] = useState(null);
   const [LastNameErrors, setLastNameErrors] = useState(null);
   // const [EmailErrors, setEmailErrors] = useState(null);
   // const [PasswordErrors, setPasswordErrors] = useState(null);
   // const [CpasswordErrors, setCpasswordErrors] = useState(null);
+
+  // const handleDonations = (e) => {
+  //   e.preventDefault();
+  //   axios
+  //     .post("http://localhost:8000/api/stripe/")
+  //     .then((res) => {
+  //       console.log(res.data);
+  //       setErrors(null);
+  //       navigate("/donate");
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //       setErrors(err?.response?.data?.errors);
+  //     });
+  // };
 
   const firstNameHandler = (e) => {
     setFirstName(e.target.value);
@@ -110,6 +126,8 @@ const Donate = () => {
           <div className="row g-5">
             <div className="col-md-7 col-lg-8">
               <h4 className="mb-3">Billing address</h4>
+
+
               <form className="needs-validation" novalidate>
                 <div className="row g-3">
                   <div className="col-sm-6">
