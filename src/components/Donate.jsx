@@ -9,18 +9,18 @@ const Donate = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   // const [email, setEmail] = useState("");
-  // const [address, setAddress] = useState("");
-  // const [country, setCountry] = useState("");
-  // const [state, setState] = useState("");
+  const [address, setAddress] = useState("");
+  const [country, setCountry] = useState("");
+  const [ccname, setCcname] = useState("");
   // const [zip, setZip] = useState("");
 
   // const [forms, setForms] = useState([]);
   // const [hasBeenSubmitted, setHasBeenSubmitted] = useState("false");
   const [FirstNameErrors, setFirstNameErrors] = useState(null);
   const [LastNameErrors, setLastNameErrors] = useState(null);
-  // const [EmailErrors, setEmailErrors] = useState(null);
-  // const [PasswordErrors, setPasswordErrors] = useState(null);
-  // const [CpasswordErrors, setCpasswordErrors] = useState(null);
+  const [AddressErrors, setAddressErrors] = useState(null);
+  const [CountryErrors, setCountryErrors] = useState(null);
+  const [CcNameErrors, setCcNameErrors] = useState(null);
 
   // const handleDonations = (e) => {
   //   e.preventDefault();
@@ -50,47 +50,25 @@ const Donate = () => {
 
   const lastNameHandler = (e) => {
     setLastName(e.target.value);
-    if (e.target.value.length < 1) {
-      setLastNameErrors("Valid last name is required.");
-    } else if (e.target.value.length < 2) {
-      setLastNameErrors("Field must be at least 2 characters!");
-    } else {
+    if (e.target.value.length < 1){
+      setLastNameErrors('Valid last name is required.');
+    }else if (e.target.value.length < 2 ){
+      setLastNameErrors("Field must be at least 2 characters!")
+    }else {
       setLastNameErrors(null);
     }
   };
 
-  // const emailHandler = (e) => {
-  //   setEmail(e.target.value);
-  //   if (e.target.value.length < 1){
-  //     setEmailErrors('Please enter a valid email address for shipping updates.');
-  //   }else if (e.target.value.length < 5 ){
-  //     setEmailErrors("Field must be at least 5 characters!")
-  //   }else {
-  //     setEmailErrors(null);
-  //   }
-  // }
-
-  // const addressHandler = (e) => {
-  //   setAddress(e.target.value);
-  //   if (e.target.value.length < 1){
-  //     setAddress('');
-  //   }else if (e.target.value.length < 5 ){
-  //     setAddress("Field must be at least 5 characters!")
-  //   }else {
-  //     setAddress(null);
-  //   }
-  // }
-
-  // const countryHandler = (e) => {
-  //   setCountry(e.target.value);
-  //   if (e.target.value.length < 1){
-  //     setCountry('Password must match!');
-  //   }else if (e.target.value.length < 8 ){
-  //     setCountry("Password must be at least 8 characters!")
-  //   }else {
-  //     setCountry(null);
-  //   }
-  // }
+  const ccNameHandler = (e) => {
+    setCcname(e.target.value);
+    if (e.target.value.length < 1) {
+      setCcNameErrors("Valid first name is required.");
+    } else if (e.target.value.length < 2) {
+      setCcNameErrors("Field must be at least 2 characters!");
+    } else {
+      setCcNameErrors(null);
+    }
+  };
 
   // const cpasswordHandler = (e) => {
   //   setCpassword(e.target.value);
@@ -214,7 +192,16 @@ const Donate = () => {
                       id="address"
                       placeholder="1234 Main St"
                       required
+                      value={address}
+                      onChange={addressHandler}
                     />
+
+                    {AddressErrors && (
+                      <span class="form-text text-danger">
+                        {AddressErrors}
+                      </span>
+                    )}
+
                     <div className="invalid-feedback">
                       Please enter your shipping address.
                     </div>
@@ -236,7 +223,15 @@ const Donate = () => {
                     <label for="country" className="form-label">
                       Country
                     </label>
-                    <select className="form-select" id="country" required>
+                    <select className="form-select" id="country" required value={country}
+                      onChange={countryHandler}
+                    >
+
+                    {CountryErrors && (
+                      <span class="form-text text-danger">
+                        {CountryErrors}
+                      </span>
+                    )}
                       <option value="">Choose...</option>
                       <option>United States</option>
                       <option>Portugal</option>
@@ -360,7 +355,17 @@ const Donate = () => {
                       id="cc-name"
                       placeholder=""
                       required
+                      value={ccname}
+                      onChange={ccNameHandler}
                     />
+
+                    {CcNameErrors && (
+                      <span class="form-text text-danger">
+                        {CcNameErrors}
+                      </span>
+                    )}
+
+                    
                     <small className="text-muted">
                       Full name as displayed on card
                     </small>
@@ -401,49 +406,33 @@ const Donate = () => {
                     </div>
                   </div>
 
-                  <div className="col-md-3">
-                    <label for="cc-cvv" className="form-label">
-                      CVV
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="cc-cvv"
-                      placeholder=""
-                      required
-                    />
-                    <div className="invalid-feedback">
-                      Security code required
-                    </div>
-                  </div>
-                </div>
-
-                <hr className="my-4" />
-
-                <button className="w-100 btn btn-primary btn-lg" type="submit">
-                  Donate Now
-                </button>
-              </form>
+            <div className="col-md-3">
+              <label for="cc-cvv" className="form-label">CVV</label>
+              <input type="text" className="form-control" id="cc-cvv" placeholder="" required />
+              <div className="invalid-feedback">
+                Security code required
+              </div>
             </div>
           </div>
-        </main>
 
-        <footer className="my-5 pt-5 text-muted text-center text-small">
-          <p className="mb-1">&copy; 2023 Mateus Palace</p>
-          <ul className="list-inline">
-            <li className="list-inline-item">
-              <Link to="#">Privacy</Link>
-            </li>
-            <li className="list-inline-item">
-              <Link to="#">Terms</Link>
-            </li>
-            <li className="list-inline-item">
-              <Link to="#">Support</Link>
-            </li>
-          </ul>
-        </footer>
+          <hr className="my-4" />
+
+          <button className="w-100 btn btn-primary btn-lg" type="submit">Continue to Donations</button>
+        </form>
       </div>
     </div>
-  );
-};
+  </main>
+
+  <footer className="my-5 pt-5 text-muted text-center text-small">
+    <p className="mb-1">&copy; 2017–2022 Company Name</p>
+    <ul className="list-inline">
+      <li className="list-inline-item"><Link to="#">Privacy</Link></li>
+      <li className="list-inline-item"><Link to="#">Terms</Link></li>
+      <li className="list-inline-item"><Link to="#">Support</Link></li>
+    </ul>
+  </footer>
+</div>
+</div>
+  )
+}
 export default Donate;
