@@ -59,6 +59,17 @@ const Donate = () => {
     }
   };
 
+  const addressHandler = (e) => {
+    setAddress(e.target.value);
+    if (e.target.value.length < 1){
+      setAddressErrors('Please enter the address.');
+    }else if (e.target.value.length < 2 ){
+      setAddressErrors("Field must be at least 6 characters!")
+    }else {
+      setAddressErrors(null);
+    }
+  };
+
   const ccNameHandler = (e) => {
     setCcname(e.target.value);
     if (e.target.value.length < 1) {
@@ -182,7 +193,7 @@ const Donate = () => {
                       placeholder="1234 Main St"
                       required
                       value={address}
-                      onChange={lastNameHandler}
+                      onChange={addressHandler}
                     />
 
                     {AddressErrors && (
