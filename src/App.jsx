@@ -10,6 +10,7 @@ function App() {
   return (
     <div>
       <NavBar />
+      <Donate />
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
