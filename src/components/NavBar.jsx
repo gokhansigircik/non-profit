@@ -7,8 +7,8 @@ function NavBar() {
       <header>
         <nav className="navbar navbar-expand-md navbar-dark sticky-top">
           <div className="container-fluid">
-            <Link className="navbar-brand" style={{ color: "black" }} to="/">
-              Mateus Palace
+            <Link className="navbar-brand" style={{ color: "black" }} to="/"><h1>
+              Mateus Palace</h1>
             </Link>
             {/* <button
               className="navbar-toggler"

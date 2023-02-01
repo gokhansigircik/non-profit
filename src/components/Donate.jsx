@@ -12,8 +12,10 @@ function Donate() {
     <div className="py-5 text-center">
     <img className="img-fluid" src={MateusLogo} alt="error" width="272" height="257" />
       {/* <img className="d-block mx-auto mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57" /> */}
-      <h2>Checkout form</h2>
-      <p className="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+      {/* <h2>Checkout form</h2> */}
+      <p className="lead">Mateus Palace is a 501(c)3 charity.
+
+Your gift is tax-deductible as allowed by U.S. law.</p>
     </div>
 
     <div className="row g-5">
@@ -222,14 +224,14 @@ function Donate() {
 
           <hr className="my-4" />
 
-          <button className="w-100 btn btn-primary btn-lg" type="submit">Continue to Donations</button>
+          <button className="w-100 btn btn-primary btn-lg" type="submit">Give now</button>
         </form>
       </div>
     </div>
   </main>
 
   <footer className="my-5 pt-5 text-muted text-center text-small">
-    <p className="mb-1">&copy; 2017–2022 Mateus Palace</p>
+    <p className="mb-1">&copy; 2023 Mateus Palace</p>
     <ul className="list-inline">
       <li className="list-inline-item"><Link to="#">Privacy</Link></li>
       <li className="list-inline-item"><Link to="#">Terms</Link></li>
