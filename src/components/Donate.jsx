@@ -435,50 +435,32 @@ const Donate = () => {
                     </div>
                   </div>
 
-                  <div className="col-md-3">
-                    <label for="cc-cvv" className="form-label">
-                      CVV
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="cc-cvv"
-                      placeholder=""
-                      required
-                    />
-                    <div className="invalid-feedback">
-                      Security code required
-                    </div>
-                  </div>
-                </div>
-
-                <hr className="my-4" />
-
-                <button className="w-100 btn btn-primary btn-lg" type="submit">
-                  Continue to Donations
-                </button>
-              </form>
+            <div className="col-md-3">
+              <label for="cc-cvv" className="form-label">CVV</label>
+              <input type="text" className="form-control" id="cc-cvv" placeholder="" required />
+              <div className="invalid-feedback">
+                Security code required
+              </div>
             </div>
           </div>
-        </main>
 
-        <footer className="my-5 pt-5 text-muted text-center text-small">
-          <p className="mb-1">&copy; 2017–2022 Company Name</p>
-          <ul className="list-inline">
-            <li className="list-inline-item">
-              <Link to="#">Privacy</Link>
-            </li>
-            <li className="list-inline-item">
-              <Link to="#">Terms</Link>
-            </li>
-            <li className="list-inline-item">
-              <Link to="#">Support</Link>
-            </li>
-          </ul>
-        </footer>
+          <hr className="my-4" />
+
+          <button className="w-100 btn btn-primary btn-lg" type="submit">Continue to Donations</button>
+        </form>
       </div>
     </div>
-  );
-};
+  </main>
 
-export default Donate;
+  <footer className="my-5 pt-5 text-muted text-center text-small">
+    <p className="mb-1">&copy; 2017–2022 Company Name</p>
+    <ul className="list-inline">
+      <li className="list-inline-item"><Link to="#">Privacy</Link></li>
+      <li className="list-inline-item"><Link to="#">Terms</Link></li>
+      <li className="list-inline-item"><Link to="#">Support</Link></li>
+    </ul>
+  </footer>
+</div>
+</div>
+  )
+}
