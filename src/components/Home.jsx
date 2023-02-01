@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MateusPic from "./img/mateus-palace.jpg";
+import MateusGarden from "./img/PalacioDeMateus-5.jpg";
+import MateusEntry from "./img/mateus.jpeg";
 
 function Home() {
   return (
@@ -253,7 +255,7 @@ function Home() {
               </p>
             </div>
             <div className="col-md-5">
-              <img className="img-fluid" src={MateusPic} alt="error" />
+              <img className="img-fluid" src={MateusGarden} alt="error" />
               {/* <svg
               className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
               width="500"
@@ -309,7 +311,7 @@ function Home() {
               </p>
             </div>
             <div className="col-md-5 order-md-1">
-              <img className="img-fluid" src={MateusPic} alt="error" />
+              <img className="img-fluid" src={MateusEntry} alt="error" />
               {/* <svg
               className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
               width="500"
