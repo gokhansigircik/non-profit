@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-
+import MateusLogo from "./img/fcm-logotipo.svg";
 
 function Donate() {
   return (
@@ -10,13 +10,14 @@ function Donate() {
       <div className="container">
   <main>
     <div className="py-5 text-center">
-      <img className="d-block mx-auto mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57" />
+    <img className="img-fluid" src={MateusLogo} alt="error" width="272" height="257" />
+      {/* <img className="d-block mx-auto mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57" /> */}
       <h2>Checkout form</h2>
       <p className="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
     </div>
 
     <div className="row g-5">
-      <div className="col-md-5 col-lg-4 order-md-last">
+      {/* <div className="col-md-5 col-lg-4 order-md-last">
         <h4 className="d-flex justify-content-between align-items-center mb-3">
           <span className="text-primary">Your cart</span>
           <span className="badge bg-primary rounded-pill">3</span>
@@ -62,19 +63,18 @@ function Donate() {
             <button type="submit" className="btn btn-secondary">Redeem</button>
           </div>
         </form>
-      </div>
+      </div> */}
       <div className="col-md-7 col-lg-8">
         <h4 className="mb-3">Billing address</h4>
         <form className="needs-validation" novalidate>
           <div className="row g-3">
             <div className="col-sm-6">
               <label for="firstName" className="form-label">First name</label>
-              <input type="text" className="form-control" id="firstName" placeholder="" value="" required />
+              <input type="text" className="form-control" id="firstName" placeholder="" required />
               <div className="invalid-feedback">
                 Valid first name is required.
               </div>
             </div>
-
             <div className="col-sm-6">
               <label for="lastName" className="form-label">Last name</label>
               <input type="text" className="form-control" id="lastName" placeholder="" value="" required />
@@ -83,7 +83,7 @@ function Donate() {
               </div>
             </div>
 
-            <div className="col-12">
+            {/* <div className="col-12">
               <label for="username" className="form-label">Username</label>
               <div className="input-group has-validation">
                 <span className="input-group-text">@</span>
@@ -92,7 +92,7 @@ function Donate() {
                   Your username is required.
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div className="col-12">
               <label for="email" className="form-label">Email <span className="text-muted">(Optional)</span></label>
@@ -120,6 +120,8 @@ function Donate() {
               <select className="form-select" id="country" required>
                 <option value="">Choose...</option>
                 <option>United States</option>
+                <option>Portugal</option>
+                <option>Canada</option>
               </select>
               <div className="invalid-feedback">
                 Please select a valid country.
@@ -130,7 +132,13 @@ function Donate() {
               <label for="state" className="form-label">State</label>
               <select className="form-select" id="state" required>
                 <option value="">Choose...</option>
+                <option>Arizona</option>
                 <option>California</option>
+                <option>Florida</option>
+                <option>Maryland</option>
+                <option>Virgina</option>
+                <option>Washington DC</option>
+                <option>Wyoming</option>
               </select>
               <div className="invalid-feedback">
                 Please provide a valid state.
@@ -214,7 +222,7 @@ function Donate() {
 
           <hr className="my-4" />
 
-          <button className="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+          <button className="w-100 btn btn-primary btn-lg" type="submit">Continue to Donations</button>
         </form>
       </div>
     </div>
