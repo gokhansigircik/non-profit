@@ -156,17 +156,6 @@ const Donate = () => {
                     </div>
                   </div>
 
-                  {/* <div className="col-12">
-              <label for="username" className="form-label">Username</label>
-              <div className="input-group has-validation">
-                <span className="input-group-text">@</span>
-                <input type="text" className="form-control" id="username" placeholder="Username" required />
-              <div className="invalid-feedback">
-                  Your username is required.
-                </div>
-              </div>
-            </div> */}
-
                   <div className="col-12">
                     <label for="email" className="form-label">
                       Email <span className="text-muted">(Optional)</span>
@@ -193,7 +182,7 @@ const Donate = () => {
                       placeholder="1234 Main St"
                       required
                       value={address}
-                      onChange={addressHandler}
+                      onChange={lastNameHandler}
                     />
 
                     {AddressErrors && (
@@ -224,7 +213,7 @@ const Donate = () => {
                       Country
                     </label>
                     <select className="form-select" id="country" required value={country}
-                      onChange={countryHandler}
+                      onChange={lastNameHandler}
                     >
 
                     {CountryErrors && (
@@ -424,7 +413,7 @@ const Donate = () => {
   </main>
 
   <footer className="my-5 pt-5 text-muted text-center text-small">
-    <p className="mb-1">&copy; 2017–2022 Company Name</p>
+    <p className="mb-1">&copy; 2023 Mateus Palace</p>
     <ul className="list-inline">
       <li className="list-inline-item"><Link to="#">Privacy</Link></li>
       <li className="list-inline-item"><Link to="#">Terms</Link></li>
