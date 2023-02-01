@@ -14,11 +14,8 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
-<<<<<<< HEAD
           <Route path="/" element={<Donate />} />
-=======
           <Route path="/donate" element={<Donate />} />
->>>>>>> d46a3357f6599ced5c0f474cc38c781ba0419db9
         </Routes>
       </div>
     </div>
