@@ -464,3 +464,4 @@ const Donate = () => {
 </div>
   )
 }
+export default Donate;
